@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CJ Farm | Coming Soon</title>
+  <meta name="description" content="CJ Farm is a small Pennsylvania farm dedicated to rescuing and caring for animals and creating a welcoming place for veterans and people with special needs.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2d2d2d;
+      background: #f7f3e9;
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(42, 55, 34, .78), rgba(42, 55, 34, .78)),
+        linear-gradient(135deg, #657a55, #35452d);
+      color: white;
+    }
+    .hero-inner { max-width: 850px; }
+    .logo {
+      font-size: clamp(3.2rem, 10vw, 6.5rem);
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    .tagline {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      margin: 8px 0 24px;
+      font-weight: 400;
+    }
+    .coming {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 2px solid white;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 8px;
+      background: #fff;
+      color: #35452d;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); opacity: .9; }
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 65px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 0;
+      color: #35452d;
+    }
+    .mission {
+      max-width: 780px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    }
+    .icon { font-size: 2.5rem; }
+    .card h3 { color: #35452d; margin-bottom: 8px; }
+    footer {
+      background: #35452d;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer a { color: white; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="coming">Coming Soon</div>
+      <h1 class="logo">CJ Farm</h1>
+      <div class="tagline">Rescue. Care. Connect.</div>
+      <p>
+        We're building something special here at CJ Farm — a place where rescued
+        animals can thrive and people can slow down, connect, and enjoy the simple
+        joys of farm life.
+      </p>
+      <a class="button" href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">
+        Follow CJ Farm on Facebook
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <h2>What We Do</h2>
+    <p class="mission">
+      CJ Farm is a small Pennsylvania farm dedicated to rescuing and raising animals
+      while creating a welcoming, peaceful farm experience for veterans, people with
+      special needs, families, and animal lovers.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🐐</div>
+        <h3>Animal Rescue</h3>
+        <p>Providing rescued and unwanted farm animals with a safe, loving place to call home.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>Community</h3>
+        <p>Creating opportunities for people to connect with animals, nature, and each other.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🇺🇸</div>
+        <h3>Veterans &amp; Special Needs</h3>
+        <p>Working toward a farm experience where veterans and people with special needs can visit, relax, and enjoy the animals.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌱</div>
+        <h3>Growing Together</h3>
+        <p>Building CJ Farm one animal, one visitor, and one act of kindness at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>CJ Farm</strong> • Pennsylvania</p>
+    <p>Our full website is coming soon!</p>
+    <p><a href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">Visit us on Facebook</a></p>
+  </footer>
+
+</body>
+</html>
