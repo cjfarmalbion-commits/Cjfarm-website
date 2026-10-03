@@ -3,165 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CJ Farm | Coming Soon</title>
-  <meta name="description" content="CJ Farm is a small Pennsylvania farm dedicated to rescuing and caring for animals and creating a welcoming place for veterans and people with special needs.">
+  <meta name="description" content="CJ Farm — a small Pennsylvania farm focused on animal rescue, education, and creating meaningful experiences for veterans and people with special needs.">
+  <title>CJ Farm | Rescue • Animals • Community</title>
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --green: #304d36;
+      --green-dark: #203426;
+      --cream: #f7f3e9;
+      --tan: #d9c8a5;
+      --brown: #76583f;
+      --white: #fff;
+      --text: #293129;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #2d2d2d;
-      background: #f7f3e9;
+      color: var(--text);
+      background: var(--cream);
       line-height: 1.6;
     }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(32,52,38,.97);
+      padding: 14px 5%;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { color: white; text-decoration: none; font-size: 1.35rem; font-weight: 800; }
+    nav a { color: white; text-decoration: none; margin-left: 22px; font-weight: 600; }
+    nav a:hover { color: var(--tan); }
     .hero {
-      min-height: 72vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
+      min-height: 78vh;
+      display: grid; place-items: center;
+      text-align: center; padding: 80px 20px;
       background:
-        linear-gradient(rgba(42, 55, 34, .78), rgba(42, 55, 34, .78)),
-        linear-gradient(135deg, #657a55, #35452d);
+        linear-gradient(rgba(20,35,24,.58), rgba(20,35,24,.68)),
+        radial-gradient(circle at center, #78926f 0, #405c43 45%, #24382a 100%);
       color: white;
     }
     .hero-inner { max-width: 850px; }
-    .logo {
-      font-size: clamp(3.2rem, 10vw, 6.5rem);
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin: 0;
+    .badge {
+      display: inline-block; padding: 8px 16px; border: 1px solid rgba(255,255,255,.5);
+      border-radius: 30px; margin-bottom: 18px; font-size: .9rem;
     }
-    .tagline {
-      font-size: clamp(1.4rem, 4vw, 2.2rem);
-      margin: 8px 0 24px;
-      font-weight: 400;
+    h1 { font-size: clamp(3rem, 9vw, 6.5rem); line-height: .95; margin-bottom: 22px; }
+    .hero p { font-size: clamp(1.1rem, 2.5vw, 1.45rem); max-width: 700px; margin: auto; }
+    .buttons { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 13px 22px; border-radius: 7px;
+      text-decoration: none; font-weight: 700;
     }
-    .coming {
-      display: inline-block;
-      padding: 10px 22px;
-      border: 2px solid white;
-      border-radius: 999px;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 1.1rem;
-    }
-    .button {
-      display: inline-block;
-      padding: 13px 24px;
-      border-radius: 8px;
-      background: #fff;
-      color: #35452d;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform .2s ease, opacity .2s ease;
-    }
-    .button:hover { transform: translateY(-2px); opacity: .9; }
-    section {
-      max-width: 1050px;
-      margin: auto;
-      padding: 65px 20px;
-      text-align: center;
-    }
-    h2 {
-      font-size: 2.2rem;
-      margin-top: 0;
-      color: #35452d;
-    }
-    .mission {
-      max-width: 780px;
-      margin: auto;
-      font-size: 1.1rem;
-    }
+    .btn-primary { background: white; color: var(--green-dark); }
+    .btn-secondary { border: 2px solid white; color: white; }
+    section { padding: 72px 6%; }
+    .container { max-width: 1100px; margin: auto; }
+    .section-title { text-align: center; color: var(--green-dark); font-size: 2.4rem; margin-bottom: 14px; }
+    .section-intro { max-width: 720px; text-align: center; margin: 0 auto 42px; font-size: 1.08rem; }
+    .about { background: white; }
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 22px;
-      margin-top: 35px;
     }
     .card {
-      background: white;
-      border-radius: 14px;
-      padding: 28px 22px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+      background: var(--cream); border-radius: 14px; padding: 28px;
+      border: 1px solid #e5ddca;
     }
-    .icon { font-size: 2.5rem; }
-    .card h3 { color: #35452d; margin-bottom: 8px; }
+    .icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .card h3 { color: var(--green); margin-bottom: 8px; }
+    .animals { background: #e9e2d1; }
+    .animal-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px;
+      max-width: 900px; margin: auto;
+    }
+    .animal {
+      background: white; padding: 20px 12px; border-radius: 12px; text-align: center;
+      font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+    .animal span { display:block; font-size: 2rem; margin-bottom: 5px; }
+    .visit {
+      background: var(--green); color: white; text-align: center;
+    }
+    .visit .section-title { color: white; }
+    .visit p { max-width: 700px; margin: 0 auto 25px; }
     footer {
-      background: #35452d;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
+      background: var(--green-dark); color: #dfe8df; text-align: center; padding: 30px 20px;
     }
-    footer a { color: white; font-weight: 700; }
+    footer a { color: white; }
+    .small { font-size: .9rem; opacity: .85; margin-top: 8px; }
+    @media (max-width: 700px) {
+      nav { flex-direction: column; gap: 10px; }
+      nav a { margin: 0 7px; font-size: .9rem; }
+    }
   </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="coming">Coming Soon</div>
-      <h1 class="logo">CJ Farm</h1>
-      <div class="tagline">Rescue. Care. Connect.</div>
-      <p>
-        We're building something special here at CJ Farm — a place where rescued
-        animals can thrive and people can slow down, connect, and enjoy the simple
-        joys of farm life.
-      </p>
-      <a class="button" href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">
-        Follow CJ Farm on Facebook
-      </a>
+<nav>
+  <a class="brand" href="#top">🐾 CJ Farm</a>
+  <div>
+    <a href="#about">About</a>
+    <a href="#animals">Our Animals</a>
+    <a href="#visit">Visit</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="badge">Pennsylvania • Animal Rescue • Community</div>
+    <h1>CJ Farm</h1>
+    <p>A place where rescued animals, people, and community come together.</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#about">Learn About CJ Farm</a>
+      <a class="btn btn-secondary" href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">Follow Us on Facebook</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <h2>What We Do</h2>
-    <p class="mission">
-      CJ Farm is a small Pennsylvania farm dedicated to rescuing and raising animals
-      while creating a welcoming, peaceful farm experience for veterans, people with
-      special needs, families, and animal lovers.
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="section-title">What We’re About</h2>
+    <p class="section-intro">
+      CJ Farm is a small Pennsylvania farm with a big heart. Our goal is to rescue and care for animals
+      while creating a welcoming place where people can connect with animals, nature, and one another.
     </p>
-
     <div class="cards">
       <div class="card">
-        <div class="icon">🐐</div>
-        <h3>Animal Rescue</h3>
-        <p>Providing rescued and unwanted farm animals with a safe, loving place to call home.</p>
-      </div>
-
-      <div class="card">
         <div class="icon">❤️</div>
+        <h3>Animal Rescue</h3>
+        <p>Providing rescued animals with a safe, caring place to live and thrive.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🐐</div>
+        <h3>Animal Education</h3>
+        <p>Helping visitors learn about farm animals, responsible care, and the relationships we build with them.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
         <h3>Community</h3>
-        <p>Creating opportunities for people to connect with animals, nature, and each other.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🇺🇸</div>
-        <h3>Veterans &amp; Special Needs</h3>
-        <p>Working toward a farm experience where veterans and people with special needs can visit, relax, and enjoy the animals.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🌱</div>
-        <h3>Growing Together</h3>
-        <p>Building CJ Farm one animal, one visitor, and one act of kindness at a time.</p>
+        <p>Working toward a farm experience that welcomes veterans, people with special needs, families, and our community.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p><strong>CJ Farm</strong> • Pennsylvania</p>
-    <p>Our full website is coming soon!</p>
-    <p><a href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">Visit us on Facebook</a></p>
-  </footer>
+<section class="animals" id="animals">
+  <div class="container">
+    <h2 class="section-title">Meet the Farm</h2>
+    <p class="section-intro">Our farm family is growing! More animal profiles and photos will be added soon.</p>
+    <div class="animal-grid">
+      <div class="animal"><span>🐴</span>Donkeys</div>
+      <div class="animal"><span>🐐</span>Goats</div>
+      <div class="animal"><span>🐑</span>Sheep</div>
+      <div class="animal"><span>🐖</span>KuneKune Pigs</div>
+      <div class="animal"><span>🪿</span>Geese</div>
+      <div class="animal"><span>🦆</span>Ducks</div>
+      <div class="animal"><span>🐔</span>Chickens</div>
+      <div class="animal"><span>🐕</span>Farm Dogs</div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="container">
+    <h2 class="section-title">A Farm With a Purpose</h2>
+    <p>
+      We are working toward opening CJ Farm for special experiences, animal visits, community events,
+      and opportunities for people to spend time around animals in a safe and welcoming environment.
+    </p>
+    <a class="btn btn-primary" href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">See What’s Happening on Facebook</a>
+  </div>
+</section>
+
+<section id="connect">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title">Stay Connected</h2>
+    <p class="section-intro">Follow our journey as CJ Farm grows from a small farm into a place with a bigger purpose.</p>
+    <a class="btn" style="background:var(--green);color:white;" href="https://www.facebook.com/share/19q1w52ohq/" target="_blank" rel="noopener">Visit the CJ Farm Facebook Page</a>
+  </div>
+</section>
+
+<footer>
+  <strong>🐾 CJ Farm</strong>
+  <div class="small">Animal Rescue • Education • Community</div>
+  <div class="small">© 2026 CJ Farm. All rights reserved.</div>
+</footer>
 
 </body>
 </html>
